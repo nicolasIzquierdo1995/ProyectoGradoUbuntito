@@ -123,32 +123,32 @@ runapp/fast:
 	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/build
 .PHONY : runapp/fast
 
-h5_write.o: h5_write.cpp.o
+main.o: main.cpp.o
 
-.PHONY : h5_write.o
+.PHONY : main.o
 
 # target to build an object file
-h5_write.cpp.o:
-	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/h5_write.cpp.o
-.PHONY : h5_write.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-h5_write.i: h5_write.cpp.i
+main.i: main.cpp.i
 
-.PHONY : h5_write.i
+.PHONY : main.i
 
 # target to preprocess a source file
-h5_write.cpp.i:
-	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/h5_write.cpp.i
-.PHONY : h5_write.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-h5_write.s: h5_write.cpp.s
+main.s: main.cpp.s
 
-.PHONY : h5_write.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-h5_write.cpp.s:
-	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/h5_write.cpp.s
-.PHONY : h5_write.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... runapp"
 	@echo "... edit_cache"
-	@echo "... h5_write.o"
-	@echo "... h5_write.i"
-	@echo "... h5_write.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

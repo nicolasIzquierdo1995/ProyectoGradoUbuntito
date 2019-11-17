@@ -17,7 +17,7 @@ endif ()
 INCLUDE_DIRECTORIES (${HDF5_INCLUDE_DIR})
 
 # Add your application HERE
-add_executable (runapp h5_write.cpp)
+add_executable (runapp main.cpp)
 
 target_link_libraries (runapp PRIVATE ${LINK_LIBS})
 

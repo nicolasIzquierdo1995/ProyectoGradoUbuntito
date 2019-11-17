@@ -1,14 +1,16 @@
 #include "/home/osboxes/Desktop/myhdfstuff/HDF5-1.10.5-Linux/HDF_Group/HDF5/1.10.5/include/hdf5.h"
-
+#include "inputOutput.hpp"
+#include <iostream>
 #define H5FILE_NAME        "SDS.h5"
 #define DATASETNAME "IntArray"
 #define NX     5                      /* dataset dimensions */
 #define NY     6
 #define RANK   2
+using namespace std;
 
-int
-main (void)
+int main (void)
 {
+    string hola = pepe;
     hid_t       file, dataset;         /* file and dataset handles */
     hid_t       datatype, dataspace;   /* handles */
     hsize_t     dimsf[2];              /* dataset dimensions */
@@ -71,7 +73,7 @@ main (void)
     H5Tclose(datatype);
     H5Dclose(dataset);
     H5Fclose(file);
-
+    std::cout << pepe;
     return 0;
 }
 

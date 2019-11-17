@@ -57,27 +57,27 @@ include CMakeFiles/runapp.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/runapp.dir/flags.make
 
-CMakeFiles/runapp.dir/h5_write.cpp.o: CMakeFiles/runapp.dir/flags.make
-CMakeFiles/runapp.dir/h5_write.cpp.o: /home/osboxes/Desktop/myhdfstuff/source/h5_write.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/osboxes/Desktop/myhdfstuff/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runapp.dir/h5_write.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runapp.dir/h5_write.cpp.o -c /home/osboxes/Desktop/myhdfstuff/source/h5_write.cpp
+CMakeFiles/runapp.dir/main.cpp.o: CMakeFiles/runapp.dir/flags.make
+CMakeFiles/runapp.dir/main.cpp.o: /home/osboxes/Desktop/myhdfstuff/source/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/osboxes/Desktop/myhdfstuff/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runapp.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runapp.dir/main.cpp.o -c /home/osboxes/Desktop/myhdfstuff/source/main.cpp
 
-CMakeFiles/runapp.dir/h5_write.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runapp.dir/h5_write.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/osboxes/Desktop/myhdfstuff/source/h5_write.cpp > CMakeFiles/runapp.dir/h5_write.cpp.i
+CMakeFiles/runapp.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runapp.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/osboxes/Desktop/myhdfstuff/source/main.cpp > CMakeFiles/runapp.dir/main.cpp.i
 
-CMakeFiles/runapp.dir/h5_write.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runapp.dir/h5_write.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/osboxes/Desktop/myhdfstuff/source/h5_write.cpp -o CMakeFiles/runapp.dir/h5_write.cpp.s
+CMakeFiles/runapp.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runapp.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/osboxes/Desktop/myhdfstuff/source/main.cpp -o CMakeFiles/runapp.dir/main.cpp.s
 
 # Object files for target runapp
 runapp_OBJECTS = \
-"CMakeFiles/runapp.dir/h5_write.cpp.o"
+"CMakeFiles/runapp.dir/main.cpp.o"
 
 # External object files for target runapp
 runapp_EXTERNAL_OBJECTS =
 
-runapp: CMakeFiles/runapp.dir/h5_write.cpp.o
+runapp: CMakeFiles/runapp.dir/main.cpp.o
 runapp: CMakeFiles/runapp.dir/build.make
 runapp: /home/osboxes/Desktop/myhdfstuff/HDF5-1.10.5-Linux/HDF_Group/HDF5/1.10.5/lib/libhdf5_cpp.so.103.1.0
 runapp: /home/osboxes/Desktop/myhdfstuff/HDF5-1.10.5-Linux/HDF_Group/HDF5/1.10.5/lib/libhdf5.so.103.1.0

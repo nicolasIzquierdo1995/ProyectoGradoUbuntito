@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/runapp.dir/h5_write.cpp.o"
+  "CMakeFiles/runapp.dir/main.cpp.o"
   "runapp.pdb"
   "runapp"
 )
