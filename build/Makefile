@@ -123,32 +123,59 @@ runapp/fast:
 	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/build
 .PHONY : runapp/fast
 
-main.o: main.cpp.o
+sources/inputOutput.o: sources/inputOutput.cpp.o
 
-.PHONY : main.o
+.PHONY : sources/inputOutput.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/main.cpp.o
-.PHONY : main.cpp.o
+sources/inputOutput.cpp.o:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/sources/inputOutput.cpp.o
+.PHONY : sources/inputOutput.cpp.o
 
-main.i: main.cpp.i
+sources/inputOutput.i: sources/inputOutput.cpp.i
 
-.PHONY : main.i
+.PHONY : sources/inputOutput.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/main.cpp.i
-.PHONY : main.cpp.i
+sources/inputOutput.cpp.i:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/sources/inputOutput.cpp.i
+.PHONY : sources/inputOutput.cpp.i
 
-main.s: main.cpp.s
+sources/inputOutput.s: sources/inputOutput.cpp.s
 
-.PHONY : main.s
+.PHONY : sources/inputOutput.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/main.cpp.s
-.PHONY : main.cpp.s
+sources/inputOutput.cpp.s:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/sources/inputOutput.cpp.s
+.PHONY : sources/inputOutput.cpp.s
+
+sources/main.o: sources/main.cpp.o
+
+.PHONY : sources/main.o
+
+# target to build an object file
+sources/main.cpp.o:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/sources/main.cpp.o
+.PHONY : sources/main.cpp.o
+
+sources/main.i: sources/main.cpp.i
+
+.PHONY : sources/main.i
+
+# target to preprocess a source file
+sources/main.cpp.i:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/sources/main.cpp.i
+.PHONY : sources/main.cpp.i
+
+sources/main.s: sources/main.cpp.s
+
+.PHONY : sources/main.s
+
+# target to generate assembly for a file
+sources/main.cpp.s:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/sources/main.cpp.s
+.PHONY : sources/main.cpp.s
 
 # Help Target
 help:
@@ -159,9 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... runapp"
 	@echo "... edit_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... sources/inputOutput.o"
+	@echo "... sources/inputOutput.i"
+	@echo "... sources/inputOutput.s"
+	@echo "... sources/main.o"
+	@echo "... sources/main.i"
+	@echo "... sources/main.s"
 .PHONY : help
 
 

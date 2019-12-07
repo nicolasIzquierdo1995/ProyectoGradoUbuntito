@@ -16,8 +16,14 @@ else ()
 endif ()
 INCLUDE_DIRECTORIES (${HDF5_INCLUDE_DIR})
 
+file(GLOB SOURCES
+	headers/*.hpp
+	sources/*.cpp	
+)
+
+
 # Add your application HERE
-add_executable (runapp main.cpp)
+add_executable (runapp ${SOURCES})
 
 target_link_libraries (runapp PRIVATE ${LINK_LIBS})
 

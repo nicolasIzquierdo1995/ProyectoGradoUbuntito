@@ -398,17 +398,15 @@ H5FDstdio.h
 H5FDwindows.h
 /home/osboxes/Desktop/myhdfstuff/HDF5-1.10.5-Linux/HDF_Group/HDF5/1.10.5/include/H5FDwindows.h
 
-/home/osboxes/Desktop/myhdfstuff/source/inputOutput.hpp
+/home/osboxes/Desktop/myhdfstuff/source/headers/inputOutput.hpp
 string
 -
+../../HDF5-1.10.5-Linux/HDF_Group/HDF5/1.10.5/include/H5Cpp.h
 /home/osboxes/Desktop/myhdfstuff/HDF5-1.10.5-Linux/HDF_Group/HDF5/1.10.5/include/H5Cpp.h
--
 
-/home/osboxes/Desktop/myhdfstuff/source/main.cpp
-/home/osboxes/Desktop/myhdfstuff/HDF5-1.10.5-Linux/HDF_Group/HDF5/1.10.5/include/hdf5.h
--
-inputOutput.hpp
-/home/osboxes/Desktop/myhdfstuff/source/inputOutput.hpp
+/home/osboxes/Desktop/myhdfstuff/source/sources/inputOutput.cpp
+../headers/inputOutput.hpp
+/home/osboxes/Desktop/myhdfstuff/source/headers/inputOutput.hpp
 iostream
 -
 

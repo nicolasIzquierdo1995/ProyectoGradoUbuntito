@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/runapp.dir/main.cpp.o"
+  "CMakeFiles/runapp.dir/sources/inputOutput.cpp.o"
+  "CMakeFiles/runapp.dir/sources/main.cpp.o"
   "runapp.pdb"
   "runapp"
 )
