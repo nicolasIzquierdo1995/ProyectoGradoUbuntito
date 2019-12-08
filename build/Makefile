@@ -123,6 +123,33 @@ runapp/fast:
 	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/build
 .PHONY : runapp/fast
 
+sources/compresser.o: sources/compresser.cpp.o
+
+.PHONY : sources/compresser.o
+
+# target to build an object file
+sources/compresser.cpp.o:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/sources/compresser.cpp.o
+.PHONY : sources/compresser.cpp.o
+
+sources/compresser.i: sources/compresser.cpp.i
+
+.PHONY : sources/compresser.i
+
+# target to preprocess a source file
+sources/compresser.cpp.i:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/sources/compresser.cpp.i
+.PHONY : sources/compresser.cpp.i
+
+sources/compresser.s: sources/compresser.cpp.s
+
+.PHONY : sources/compresser.s
+
+# target to generate assembly for a file
+sources/compresser.cpp.s:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/sources/compresser.cpp.s
+.PHONY : sources/compresser.cpp.s
+
 sources/inputOutput.o: sources/inputOutput.cpp.o
 
 .PHONY : sources/inputOutput.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... runapp"
 	@echo "... edit_cache"
+	@echo "... sources/compresser.o"
+	@echo "... sources/compresser.i"
+	@echo "... sources/compresser.s"
 	@echo "... sources/inputOutput.o"
 	@echo "... sources/inputOutput.i"
 	@echo "... sources/inputOutput.s"

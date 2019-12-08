@@ -6,7 +6,6 @@ using namespace std;
 #ifndef H5_NO_NAMESPACE
   using namespace H5;
 #endif
-const string pepe = "pepe";
 namespace inputOutput{
   typedef struct Arguments {
     H5File file;
