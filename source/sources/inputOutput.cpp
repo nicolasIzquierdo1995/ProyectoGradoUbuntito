@@ -2,6 +2,8 @@
 #include "../headers/inputOutput.hpp"
 
 #include <iostream>
+#include <string.h>
+#include <stdio.h>
 using namespace std;
 using namespace inputOutput;
 using namespace H5;
@@ -12,17 +14,20 @@ InputOutput::InputOutput(){
 }
 
 bool VerifyArguments(int argc, char *argv[]){
-    if (argc != 2){
+    if (argc != 4){
       return false;
     }
-    const char* multiThreading = argv[1];
-    const char* compressionLevel = argv[2];
+    
+    const char* multiThreading = argv[2];
+    const char* compressionLevel = argv[3];
 
-    if (multiThreading != "true" && multiThreading != "false") {
+    cout << multiThreading << endl;
+    cout << compressionLevel << endl;
+    if (strncmp(multiThreading, "true", 4) != 0 && strncmp(multiThreading, "false", 4) != 0 ) {
       return false;
     }
 
-    if (compressionLevel != "1" && compressionLevel != "2"){
+    if (strncmp(compressionLevel, "1", 1) != 0 && strncmp(compressionLevel, "2", 1) != 0 ){
       return false;
     }
 
@@ -40,26 +45,14 @@ Arguments* CreateErrorArgument(){
 }
 
 Arguments* InputOutput::ProcessArguments(int argc, char* argv[]){
-
-
-    std::cout << argv[0];
-    std::cout << argv[1];
-    std::cout << argv[2];
-
     if (!VerifyArguments(argc,argv)){
         return CreateErrorArgument();
     }
-
-    // Arguments arg;
-    Arguments * parg = new Arguments();
-    // parg = &arg;
-    parg->multiThreading = argv[1] == "true";
-    parg->compressionLevel = atoi(argv[2]);
-    parg->isOk = true;
-    H5File file(argv[0], H5F_ACC_SWMR_WRITE);
-    parg->file = file;
-    std::cout << parg->multiThreading;
-    std::cout << parg->compressionLevel;
-    std::cout << parg->isOk;
-    return parg;
+    Arguments * arg = new Arguments();
+    arg->multiThreading = strncmp(argv[2],"false",4);
+    arg->compressionLevel = atoi(argv[3]);
+    arg->isOk = true;
+    H5File file(argv[1], H5F_ACC_SWMR_READ);
+    arg->file = file;
+    return arg;
 }

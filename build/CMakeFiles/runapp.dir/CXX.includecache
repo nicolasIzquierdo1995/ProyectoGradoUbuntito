@@ -404,7 +404,9 @@ string
 ../../HDF5-1.10.5-Linux/HDF_Group/HDF5/1.10.5/include/H5Cpp.h
 /home/osboxes/Desktop/myhdfstuff/HDF5-1.10.5-Linux/HDF_Group/HDF5/1.10.5/include/H5Cpp.h
 
-/home/osboxes/Desktop/myhdfstuff/source/sources/inputOutput.cpp
+/home/osboxes/Desktop/myhdfstuff/source/sources/main.cpp
+../../HDF5-1.10.5-Linux/HDF_Group/HDF5/1.10.5/include/hdf5.h
+/home/osboxes/Desktop/myhdfstuff/HDF5-1.10.5-Linux/HDF_Group/HDF5/1.10.5/include/hdf5.h
 ../headers/inputOutput.hpp
 /home/osboxes/Desktop/myhdfstuff/source/headers/inputOutput.hpp
 iostream
