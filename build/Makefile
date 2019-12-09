@@ -204,6 +204,33 @@ sources/main.cpp.s:
 	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/sources/main.cpp.s
 .PHONY : sources/main.cpp.s
 
+sources/utils.o: sources/utils.cpp.o
+
+.PHONY : sources/utils.o
+
+# target to build an object file
+sources/utils.cpp.o:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/sources/utils.cpp.o
+.PHONY : sources/utils.cpp.o
+
+sources/utils.i: sources/utils.cpp.i
+
+.PHONY : sources/utils.i
+
+# target to preprocess a source file
+sources/utils.cpp.i:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/sources/utils.cpp.i
+.PHONY : sources/utils.cpp.i
+
+sources/utils.s: sources/utils.cpp.s
+
+.PHONY : sources/utils.s
+
+# target to generate assembly for a file
+sources/utils.cpp.s:
+	$(MAKE) -f CMakeFiles/runapp.dir/build.make CMakeFiles/runapp.dir/sources/utils.cpp.s
+.PHONY : sources/utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"
+	@echo "... sources/utils.o"
+	@echo "... sources/utils.i"
+	@echo "... sources/utils.s"
 .PHONY : help
 
 
