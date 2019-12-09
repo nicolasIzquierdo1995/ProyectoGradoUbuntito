@@ -13,23 +13,38 @@ Compresser::Compresser(){
 
 }
 
-void Compresser::CompressFile(H5File file, int compressionLevel){
+void gzipCompression(H5File file){
     hsize_t chunk_dims[1] = {20};
     DataSet* originalDataset = new DataSet(file.openDataSet("/Raw/Reads/Read_1209/Signal"));
+
     DataType dt = originalDataset->getDataType();
     DataSpace* dataSpace = new DataSpace(originalDataset->getSpace());
     hsize_t dims[dataSpace->getSimpleExtentNdims()];
     dataSpace->getSimpleExtentDims(dims);
     int buffer[dims[0]];
-    DSetCreatPropList* plist = new  DSetCreatPropList;
-    plist->setDeflate(0);
-    plist->setChunk(1, chunk_dims);
+
+    DSetCreatPropList* plist1 = new  DSetCreatPropList;
+    plist1->setDeflate(0);
+    plist1->setChunk(1, chunk_dims);
+
+    DSetCreatPropList* plist2 = new DSetCreatPropList;
+    plist2->setDeflate(9);
+    plist2->setChunk(1, chunk_dims);
+
     originalDataset->read(buffer,dt,*dataSpace,*dataSpace);
 
-    H5File* failsito = new H5File("cuco.fast5",H5F_ACC_TRUNC);
-    DataSet* dataSet = new DataSet(failsito->createDataSet("coquito",dt,*dataSpace,*plist));    
-    dataSet->write(buffer,dt);
+    H5File* failsito1 = new H5File("noCompression.fast5",H5F_ACC_TRUNC);
+    H5File* failsito2 = new H5File("compressed.fast5",H5F_ACC_TRUNC);
+    DataSet* dataSet1 = new DataSet(failsito1->createDataSet("coquito",dt,*dataSpace,*plist1));  
+    DataSet* dataSet2 = new DataSet(failsito2->createDataSet("coquito",dt,*dataSpace,*plist2));    
+    dataSet1->write(buffer,dt);
+    dataSet2->write(buffer,dt);
+}
 
-	
+void Compresser::CompressFile(H5File file, int compressionLevel){
+
+    if(compressionLevel == 1){
+        gzipCompression(file);
+    }   
 
 }
