@@ -8,6 +8,6 @@ namespace utils{
   class Utils {
     public:
         Utils();
-        DataSet GetDataset(H5File file, string path, string name);
+        DataSet* GetDataset(H5File file, string path, string dataSetGrandParentName, string dataSetName);
   };
 }

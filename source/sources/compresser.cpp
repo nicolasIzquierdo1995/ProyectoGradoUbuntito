@@ -1,5 +1,6 @@
 
 #include "../headers/compresser.hpp"
+#include "../headers/utils.hpp"
 
 #include <iostream>
 #include <string.h>
@@ -7,6 +8,7 @@
 using namespace std;
 using namespace compresser;
 using namespace H5;
+using namespace utils;
 
 
 Compresser::Compresser(){
@@ -15,8 +17,8 @@ Compresser::Compresser(){
 
 void gzipCompression(H5File file){
     hsize_t chunk_dims[1] = {20};
-    DataSet* originalDataset = new DataSet(file.openDataSet("/Raw/Reads/Read_1209/Signal"));
-
+    Utils* utils = new Utils();
+    DataSet* originalDataset =  utils->GetDataset(file, "/Raw/Reads", "Read", "Signal");
     DataType dt = originalDataset->getDataType();
     DataSpace* dataSpace = new DataSpace(originalDataset->getSpace());
     hsize_t dims[dataSpace->getSimpleExtentNdims()];
